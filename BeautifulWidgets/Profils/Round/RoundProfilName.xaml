@@ -3,17 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeautifulWidgets.Profils.Round.RoundProfilName">
     <ContentView.Content>
-        <StackLayout Padding="40">
-            <Frame CornerRadius="50" 
-               HeightRequest="60"
-               WidthRequest="60"
-               HorizontalOptions="Center"
-               Padding="0"
-               IsClippedToBounds="True">
-                <Image BackgroundColor="Beige"
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Column="0">
+                <Frame CornerRadius="50" 
+                   HeightRequest="60"
+                   WidthRequest="60"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                    <Image HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                </Frame>
+            </StackLayout>
+            <Label Grid.Column="1"
+                   Margin="10,0,0,0"
+                    Text="Nora Powell"
+                   FontAttributes="Bold"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-            </Frame>
-        </StackLayout>
+                   VerticalOptions="Center"
+                   Padding="0"
+                   TextColor="Black"/>
+        </Grid>
     </ContentView.Content>
 </ContentView>

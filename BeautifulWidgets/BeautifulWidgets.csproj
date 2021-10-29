@@ -18,10 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Menu\Burger\MenuBurgerLeft.xaml">
+    <EmbeddedResource Update="Views\Controls\Menu\Burger\MenuBurgerLeft.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Profils\Round\RoundProfilName.xaml">
+    <EmbeddedResource Update="Views\Controls\Profils\Round\RoundProfilName.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Ressources\Images.xaml">

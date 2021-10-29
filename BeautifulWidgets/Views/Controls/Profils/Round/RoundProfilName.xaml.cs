@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BeautifulWidgets.Profils.Round
+namespace BeautifulWidgets.Views.Controls.Profils.Round
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RoundProfilName : ContentView

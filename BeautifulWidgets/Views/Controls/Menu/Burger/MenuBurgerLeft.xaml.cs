@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BeautifulWidgets.Menu.Burger
+namespace BeautifulWidgets.Views.Controls.Menu.Burger
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuBurgerLeft : ContentView

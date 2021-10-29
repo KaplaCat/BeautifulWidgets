@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:profil="clr-namespace:BeautifulWidgets.Profils.Round"
              x:Class="BeautifulWidgets.Menu.Burger.MenuBurgerLeft">
     <ContentView.Content>
         <Grid >
@@ -12,7 +11,7 @@
                                         Swiped="FlyoutClose" />
                 </Grid.GestureRecognizers>
                 <!-- ADD WIDGETS HERE-->
-                <profil:RoundProfilName/>
+                <ContentView x:Name="menuContent"/>
                 <!-- ############### -->
             </Grid>
 
@@ -28,7 +27,7 @@
                 </Frame.GestureRecognizers>
     
                 <!-- ADD WIDGETS HERE-->
-
+                <ContentView x:Name="pageContent"/>
                 <!-- ############### -->
             </Frame>
 

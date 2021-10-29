@@ -6,7 +6,21 @@
              x:Class="BeautifulWidgets.MainPage">
 
     <ContentPage.Content>
-        <menu:MenuBurgerLeft/>
+        <menu:MenuBurgerLeft>
+            <menu:MenuBurgerLeft.MenuContent>
+                <ContentView>
+                    <profil:RoundProfilName/>
+                </ContentView>
+            </menu:MenuBurgerLeft.MenuContent>
 
+            <menu:MenuBurgerLeft.PageContent>
+                <ContentView>
+                    <Label Text="Page Content"/>
+                </ContentView>
+            </menu:MenuBurgerLeft.PageContent>
+
+        </menu:MenuBurgerLeft>
+
+       
     </ContentPage.Content>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,30 @@ namespace BeautifulWidgets.Menu.Burger
         double _pagePositionX;
         double _flyoutTranslationX;
 
+        public static readonly BindableProperty MenuContentProperty = BindableProperty.Create(
+                nameof(MenuContent), 
+                typeof(ContentView),
+                typeof(MenuBurgerLeft), 
+                default(ContentView),
+                BindingMode.TwoWay);
+        public static readonly BindableProperty PageContentProperty = BindableProperty.Create(
+                nameof(PageContent), 
+                typeof(ContentView), 
+                typeof(MenuBurgerLeft),
+                default(ContentView),
+                BindingMode.TwoWay);
+
+        public ContentView MenuContent
+        {
+            get { return (ContentView)GetValue(MenuContentProperty); }
+            set { SetValue(MenuContentProperty, value); }
+        }
+        public ContentView PageContent
+        {
+            get { return (ContentView)GetValue(PageContentProperty); }
+            set { SetValue(PageContentProperty, value); }
+        }
+
         public MenuBurgerLeft()
         {
             InitializeComponent();
@@ -28,6 +53,20 @@ namespace BeautifulWidgets.Menu.Burger
 
             MainContent.SizeChanged += OnMainContentSizeChanged;
             Flyout.Opacity = 0;
+        }
+
+        protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (propertyName.Equals(MenuContentProperty.PropertyName))
+                menuContent.Content = MenuContent;
+            else if (propertyName.Equals(PageContentProperty.PropertyName))
+                pageContent.Content = PageContent;
+        }
+
+        private void MenuContent_ChildAdded(object sender, ElementEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         void OnMainContentSizeChanged(object sender, EventArgs e)
@@ -78,5 +117,7 @@ namespace BeautifulWidgets.Menu.Burger
 
             _isFlyoutOpen = !_isFlyoutOpen;
         }
+
+       
     }
 }

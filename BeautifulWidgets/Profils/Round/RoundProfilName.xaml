@@ -18,6 +18,7 @@
                    Padding="0"
                    IsClippedToBounds="True">
                     <Image HorizontalOptions="Center"
+                           Source="{StaticResource USER}"
                        VerticalOptions="Center" />
                 </Frame>
             </StackLayout>
